@@ -54,10 +54,33 @@
         <div id="blog" class=" page invisible">
             
         </div>
+        <div id="changelog" class=" page invisible">
+            <h3>3.8.2023</h3>
+            <ul>
+                <li>Actually made a website this time (better than some placeholder)</li>
+                <li>Added pages: home, about me, contact, blog, changelog(if someone is interested for some reason)</li>
+                <li>Combined everything into one page and made switching with javascript (there isn't enough content that I'd have to have mutliple pages on a website and this is faster so win win ig)</li>
+                <li>Added a WIP label so no one says that my site is incomplete cause I know that ._.</li>
+                <li>Added dark and light mode to the website so people can sin by using the light mode</li>
+                <li>Added meta stuff so this can look more like a proper website and not like a den (even tho it kinda is)</li>
+                <li>Added a "no mobile yet" label so I get no comments about this not being compatible with mobile. I know it isn't</li>
+                <li>Added a link to the source code of this website so people can see how bad my code is</li>
+                <li>Accidentaly put images into the main directory of the repo and the assets folder (i'll get rid of that eventually)</li>
+                <li>Made icon sets so I don't rely on online sites providing them</li>
+            </ul>
+
+            <!-- simple divider-->
+            <span class="space"> </span>
+
+            <h3>2.8.2023</h3>
+            <ul>
+                <li>Created repo and set up placeholder page</li>
+            </ul>
+        </div>
     </div>
     <!-- WIP Label -->
     <div style=" height: 20vh;display: flex;align-items: center;justify-content: flex-end;flex-direction: column;"><div style="margin: 0 auto;width: 40%;text-align: center;height: 10vh;display: flex;flex-direction: column;justify-content: center;background: var(--menu-background-color);border-radius: 20px;"><h2 class="gradient2" style=" margin: 0px;">I'm still working on the website :)</h2> <p style="margin-top: 5px;font-size: 10px;margin-bottom: 0px;">Last update 3.8.2023</p></div></div>
-    <footer>no mobile yet :) <span class="icon-circle"></span> <a class="menu-link" href="https://github.com/Jan-Fcloud/jan-fcloud.github.io" target="_blank">source code</a></footer>
+    <footer>no mobile yet :) <span class="icon-circle"></span> <a class="menu-link" href="https://github.com/Jan-Fcloud/jan-fcloud.github.io" target="_blank">source code </a><span class="icon-circle"></span> <a class="menu-link" href="#" onclick="pageSwitch('changelog');">changelog</a></footer>
 </body>
 <script>
     const themeChanger = document.getElementById("change-theme");
@@ -99,6 +122,10 @@
             case "blog":
                 pages[3].classList.add("visible");
                 pages[3].classList.remove("invisible");
+                break;
+            case "changelog":
+                pages[4].classList.add("visible");
+                pages[4].classList.remove("invisible");
                 break;
             default:
                 break;
