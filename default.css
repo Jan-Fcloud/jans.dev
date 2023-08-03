@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'jansdev-icons';
+    src:  url('fonts/jansdev-icons.eot?yb2u2m');
+    src:  url('fonts/jansdev-icons.eot?yb2u2m#iefix') format('embedded-opentype'),
+      url('fonts/jansdev-icons.ttf?yb2u2m') format('truetype'),
+      url('fonts/jansdev-icons.woff?yb2u2m') format('woff'),
+      url('fonts/jansdev-icons.svg?yb2u2m#jansdev-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'jansdev-icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-circle:before {
+    content: "\e902";
+    font-size: 6px;
+  }
+  .icon-moon:before {
+    content: "\e901";
+  }
+  .icon-Rammstein:before {
+    content: "\e900";
+  }
+  .icon-sun:before {
+    content: "\e9d4";
+  }
+  
+   .icon-moon, .icon-Rammstein, .icon-sun, .icon-circle{
+    display: flex;
+    align-items: center;
+  }
+
+:root{
+    --menu-background-color: #f6f6f7;
+    --background-color: #ffffff;
+    --text-color: black;
+}
+  
+body[data-theme="dark"]{
+    --menu-background-color: #171717;
+    --background-color: #1c1b1b;
+    --text-color: #ffffff;
+}
+
+body{background: var(--background-color); margin: 0; color: var(--text-color)}
+*{color: var(--text-color); font-family: Inter,system-ui,sans-serif;}
+a{color: var(--text-color);}
+
+
+#main-menu{
+    margin-bottom: 60px;
+    background: var(--menu-background-color);
+}
+
+.top-menu{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    justify-content: center;
+    padding: 25px;
+}
+
+.menu-link{
+    text-decoration: none;
+    font-size: 20px;
+    transition: all .2s ease-in;
+}
+
+.menu-link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+    background: #771FCF;
+    background: -webkit-linear-gradient(to right, #994ae7 0%, #6755db 65%);
+    background: -moz-linear-gradient(to right, #994ae7 0%, #6755db 65%);
+    background: linear-gradient(to right, #994ae7 0%, #6755db 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#content{
+    width:1200px;
+    margin: 0 auto;
+   /* padding: 0px 8vw; */
+}
+
+.gradient{
+    background: #771FCF;
+    background: -webkit-linear-gradient(to right, #994ae7 0%, #6755db 65%);
+    background: -moz-linear-gradient(to right, #994ae7 0%, #6755db 65%);
+    background: linear-gradient(to right, #994ae7 0%, #6755db 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient2{
+    background: #cf6b1f;
+    background: -webkit-linear-gradient(to right, #cf6b1f 0%, #d88342 65%);
+    background: -moz-linear-gradient(to right, #cf6b1f 0%, #d88342 65%);
+    background: linear-gradient(to right, #cf6b1f 0%, #d88342 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#rammstein::after{
+    font-family: 'jansdev-icons' !important;
+    content: "\e900";
+
+    background: #cf6b1f;
+    background: -webkit-linear-gradient(to right, #cf6b1f 0%, #d88342 65%);
+    background: -moz-linear-gradient(to right, #cf6b1f 0%, #d88342 65%);
+    background: linear-gradient(to right, #cf6b1f 0%, #d88342 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.invisible{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+.card, .card img{
+    background: var(--menu-background-color);
+    padding: 20px;
+    border-radius: 50px;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    width: 93%;
+}
+
+.card-info{
+    margin-left: 2vw;
+}
+
+.flex-gap-small{
+    display: flex;
+    gap: 10px;
+}
+
+#links{
+    margin-top: 30px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--menu-background-color);
+    height: 7vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer a{
+    font-size: 16px !important;
+}
