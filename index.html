@@ -20,7 +20,7 @@
             <div class="top-menu">
                 <a class="menu-link" href="#" onclick="pageSwitch('home')">Home</a>
                 <a class="menu-link" href="#" onclick="pageSwitch('about-me')">About me</a>
-                <a class="menu-link" href="#" onclick="pageSwitch('contact')">Contact</a>
+               <!-- <a class="menu-link" href="#" onclick="pageSwitch('contact')">Contact</a> -->
                 <a class="menu-link" href="#" onclick="pageSwitch('blog')">Blog</a>
                 <a class="icon-moon menu-link" id="change-theme" onclick="changeTheme()" href="#"></a>
             </div>
@@ -53,12 +53,42 @@
             </div>
         </div>
         <div id="about-me" class="page invisible">
+            <img class="mobile-img" src="assets/jans-github-pfp.jpg" height="150" width="150">
             <div class="card">
-                <img src="assets/jans-github-pfp.jpg" height="400" width="400">
+                <img class="desktop-img" src="assets/jans-github-pfp.jpg" height="400" width="400">
                 <div class="card-info">
                     <h1>About me</h1>
-                    <p class="flex-gap-small"><span class="gradient" style="font-weight: bold;">Jan </span><span class="icon-circle"></span> 20</p>
-                    <p class="flex-gap-small">Developer<span class="icon-circle"></span>VR Enthusiast<span class="icon-circle"></span>Music Lover</p>
+                    <p class="flex-gap-small main-info"><span class="gradient" style="font-weight: bold;">Jan </span><span class="icon-circle"></span> 20</p>
+                    <p class="flex-gap-small sub-info">Developer<span class="icon-circle"></span>VR Enthusiast<span class="icon-circle"></span>Music Lover</p>
+                    <div class="using">
+                        <h2>Software I use:</h2>
+                        <div class="using-list">
+                            <p>Unity</p>
+                            <p>Visual Studio</p>
+                            <p>Visual Studio Code</p>
+                            <p>Notion</p>
+                            <p>Arc</p>
+                            <p>Xcode</p>
+                            <p>Adobe CC <span style="font-size: 10px;"><i>most of them</i></span></p>
+                            <p>Blender</p>
+                            <p>Boop</p>
+                            <p>phpStorm</p>
+                        </div>
+
+                        <h2>Languages I use and have used before:</h2>
+                        <div class="using-list">
+                            <p>C#</p>
+                            <p>C++</p>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                            <p>Typescript</p>
+                            <p>Swift</p>
+                            <p>PHP</p>
+                            <p><span style="font-size: 10px;"><i>there is more to come</i></span></p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -70,6 +100,15 @@
             
         </div>
         <div id="changelog" class=" page invisible">
+
+            <h3>5.8.2023</h3>
+            <ul>
+                <li>Continued working on the css for smaller screens - might actually be done soon or already is</li>
+                <li>Hid the contact page for now (it was useless)</li>
+            </ul>
+
+            <span class="space"> </span>
+
             <h3>4.8.2023</h3>
             <ul>
                 <li>Prevented css from restricting me making the page more responsive <i>kinda</i></li>
@@ -78,10 +117,8 @@
                 <li>Changed the way I switch pages (the previous broke)</li>
                 <li>The site now forces https (thank god)</li>
                 <li>Deleted the extra images laying around the root of the repo as promised</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Added labels on the About me page</li>
+                <li>Started working on the page layout for smaller screens (mobile included)</li>
             </ul>
 
             <span class="space"> </span>
@@ -110,8 +147,8 @@
         </div>
     </div>
     <!-- WIP Label -->
-    <div style=" height: 20vh;display: flex;align-items: center;justify-content: flex-end;flex-direction: column;"><div style="margin: 0 auto;width: 40%;text-align: center;height: 10vh;display: flex;flex-direction: column;justify-content: center;background: var(--menu-background-color);border-radius: 20px;"><h2 class="gradient2" style=" margin: 0px;">I'm still working on the website :)</h2> <p style="margin-top: 5px;font-size: 10px;margin-bottom: 0px;">Last update 3.8.2023</p></div></div>
-    <footer>no mobile yet :) <span class="icon-circle"></span> <a class="menu-link" href="https://github.com/Jan-Fcloud/jan-fcloud.github.io" target="_blank">source code </a><span class="icon-circle"></span> <a class="menu-link" href="#" onclick="pageSwitch('changelog');">changelog</a></footer>
+    <div id="wip-label" style=" height: 20vh;display: flex;align-items: center;justify-content: flex-end;flex-direction: column;"><div style="margin: 0 auto;width: 40%;text-align: center;height: 10vh;display: flex;flex-direction: column;justify-content: center;background: var(--menu-background-color);border-radius: 20px;"><h2 class="gradient2" style=" margin: 0px;">I'm still working on the website :)</h2> <p style="margin-top: 5px;font-size: 10px;margin-bottom: 0px;">Last update 5.8.2023</p></div></div>
+    <footer><a class="menu-link" href="https://github.com/Jan-Fcloud/jan-fcloud.github.io" target="_blank">source code </a><span class="icon-circle"></span> <a class="menu-link" href="#" onclick="pageSwitch('changelog');">changelog</a></footer>
 </body>
 <script>
     const themeChanger = document.getElementById("change-theme");
