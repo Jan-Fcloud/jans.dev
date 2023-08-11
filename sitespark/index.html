@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction - jans.dev</title>
+
+    <style>
+        body{background: #1c1b1b; margin: 0;}
+        *{color: white; font-family: Inter,system-ui,sans-serif;}
+        h1{font-size: 60px; text-align: center;}
+
+        #main-menu{
+            margin-bottom: 60px;
+            background: #171717;
+        }
+
+        .top-menu{
+            display: flex;
+            width: 100%;
+            gap: 15px;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .menu-link{
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        #content{
+            display: flex;
+            width:1000px;
+            margin: 0 auto;
+            align-items: center;
+            height: 50vh;
+        }
+
+        .message{
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gradient{
+            background: #cf5d1f;
+            background: -webkit-linear-gradient(to right, #cf5d1f 0%, #e07f4b 65%);
+            background: -moz-linear-gradient(to right, #cf5d1f 0%, #e07f4b 65%);
+            background: linear-gradient(to right, #cf5d1f 0%, #e07f4b 65%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .back-button{
+            background: linear-gradient(to right, #cf5d1f 0%, #e07f4b 65%);
+            padding: 15px 69px;
+            border-radius: 100px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .back-button:hover{
+            transform: scale(0.965);
+        }
+    </style>
+</head>
+<body>
+    <div id="main-menu">
+        <div class="top-menu">
+            <a class="menu-link" href="https://jans.dev">jans.dev</a>
+        </div>
+    </div>
+    <div id="content">
+        <div class="message">
+            <h1>This page is still <span class="gradient"> under construction.</span></h1>
+            <a class="back-button" href="https://jans.dev">Go home</a>
+        </div>
+    </div>
+    
+</body>
+</html>
