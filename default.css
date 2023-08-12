@@ -243,6 +243,50 @@ footer a{
     display: none;
 }
 
+#projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project{
+    background: var(--menu-background-color);
+    padding: 20px;
+    width: 380px;
+    height: fit-content;
+    border-radius: 20px;
+    transition: 0.24s all ease-in-out;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.project .link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.project .image{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.project .image img{
+    border-radius: 20px;
+    width: 355px;
+    object-fit: cover;
+}
+
+.project .info p:first-child{
+    text-align: center;
+}
+
+
 @media (max-width: 1036px) {
     .mobile-img{
         height: auto;
@@ -280,6 +324,16 @@ footer a{
     .menu-link{font-size: 16px !important;}
 
     footer{font-size: 16px !important;}
+}
+
+@media screen and (max-width: 435px) {
+    .project{
+        width: 300px;
+    }
+
+    .project .image img{
+        width: 275px;
+    }
 }
 
 @media (max-width: 530px){

@@ -21,7 +21,7 @@
                 <a class="menu-link" href="#" onclick="pageSwitch('home')">Home</a>
                 <a class="menu-link" href="#" onclick="pageSwitch('about-me')">About me</a>
                <!-- <a class="menu-link" href="#" onclick="pageSwitch('contact')">Contact</a> -->
-                <a class="menu-link" href="#" onclick="pageSwitch('blog')">Blog</a>
+                <a class="menu-link" href="#" onclick="pageSwitch('projects')">Projects</a>
                 <a class="icon-moon menu-link" id="change-theme" onclick="changeTheme()" href="#"></a>
             </div>
         </nav>
@@ -96,13 +96,80 @@
         <div id="contact" class="page invisible">
             
         </div>
-        <div id="blog" class=" page invisible">
-            
+        <div id="projects" class=" page invisible">
+            <div class="project">
+                <a class="link" href="https://github.com/HakuSystems/EasyExtractUnitypackage" target="_blank">
+                    <div class="image">
+                        <img src="assets/EasyExtractUnitypackage.jpg" height="200">
+                    </div>
+                    <div class="info">
+                        <p>EasyExtractUnitypackage</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <a class="link" href="https://github.com/Jan-Fcloud/Unitypackage-Extract-and-Clean" target="_blank">
+                    <div class="image">
+                        <img src="assets/unitypackage-extract-and-clean.jpg" height="200">
+                    </div>
+                    <div class="info">
+                        <p>Unitypackage Extract and Clean</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <a class="link" href="https://github.com/Jan-Fcloud/youtube-dl-Assistant" target="_blank">
+                    <div class="image">
+                        <img src="assets/youtubedl-assistant.jpg" height="200">
+                    </div>
+                    <div class="info">
+                        <p>YoutubeDL Assistant</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <a class="link" href="https://github.com/Jan-Fcloud/jan-fcloud.github.io" target="_blank">
+                    <div class="image">
+                        <img src="assets/jansdev.jpg" height="200">
+                    </div>
+                    <div class="info">
+                        <p>jans.dev</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <a class="link" href="https://github.com/Jan-Fcloud/ConsoleSearchAndHash" target="_blank">
+                    <div class="image">
+                        <img src="assets/github-cover.jpg" height="200">
+                    </div>
+                    <div class="info">
+                        <p>ConsoleSearchAndHash</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <a class="link" href="#" target="_blank">
+                    <div class="image">
+                        <img src="assets/wip.jpg" height="200">
+                    </div>
+                    <div class="info">
+                        <p>SiteSpark</p>
+                    </div>
+                </a>
+            </div>
         </div>
         <div id="changelog" class=" page invisible">
+            <h3>12.8.2023</h3>
+            <ul>
+                <li>Added content for the "Projects" page and linked them to their source code on Github</li>
+            </ul>
+
+            <span class="space"> </span>
+
             <h3>11.8.2023</h3>
             <ul>
                 <li>Renamed a page cause I rebranded a project</li>
+                <li>Turned "blog" into "projects" (lets be serious, I wouldn't have posted anything anyway).</li>
             </ul>
 
             <span class="space"> </span>
@@ -159,9 +226,9 @@
                 <li>Created repo and set up placeholder page</li>
             </ul>
         </div>
+        <div id="wip-label" style=" height: 20vh;display: flex;align-items: center;justify-content: flex-end;flex-direction: column;"><div style="margin: 0 auto;width: 40%;text-align: center;height: 10vh;display: flex;flex-direction: column;justify-content: center;background: var(--menu-background-color);border-radius: 20px;"><h2 class="gradient2" style=" margin: 0px;">I'm still working on the website :)</h2> <p style="margin-top: 5px;font-size: 10px;margin-bottom: 0px;">Last update 12.8.2023</p></div></div>
     </div>
     <!-- WIP Label -->
-    <div id="wip-label" style=" height: 20vh;display: flex;align-items: center;justify-content: flex-end;flex-direction: column;"><div style="margin: 0 auto;width: 40%;text-align: center;height: 10vh;display: flex;flex-direction: column;justify-content: center;background: var(--menu-background-color);border-radius: 20px;"><h2 class="gradient2" style=" margin: 0px;">I'm still working on the website :)</h2> <p style="margin-top: 5px;font-size: 10px;margin-bottom: 0px;">Last update 11.8.2023</p></div></div>
     <footer><a class="menu-link" href="https://github.com/Jan-Fcloud/jan-fcloud.github.io" target="_blank">source code </a><span class="icon-circle"></span> <a class="menu-link" href="#" onclick="pageSwitch('changelog');">changelog</a></footer>
 </body>
 <script>
@@ -198,7 +265,7 @@
             case "contact":
                 pages[2].classList.remove("invisible");
                 break;
-            case "blog":
+            case "projects":
                 pages[3].classList.remove("invisible");
                 break;
             case "changelog":
