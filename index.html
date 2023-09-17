@@ -29,7 +29,7 @@
     <div id="content">
         <div id="home" class="flex page visible">
             <div class="intro width-2-3">
-                <h1>Hi, I'm <span class="gradient">Jan!</span></h1>
+                <h1 class="h1-title-hello">Hi, I'm <span class="gradient">Jan!</span></h1>
                 <p>A developer with the ambition to create, innovate and teach. I am very pasionate about VR and its industry.</p>
                 <p>I love music and I listen to it everday, all day. I love <span id="rammstein">Rammstein  </span></p>
             </div>
@@ -73,9 +73,10 @@
                             <p>Blender</p>
                             <p>Boop</p>
                             <p>phpStorm</p>
+                            <p>Unreal Engine</p>
                         </div>
 
-                        <h2>Languages I use and have used before:</h2>
+                        <h2>Things I've developed with so far:</h2>
                         <div class="using-list">
                             <p>C#</p>
                             <p>C++</p>
@@ -85,6 +86,8 @@
                             <p>Typescript</p>
                             <p>Swift</p>
                             <p>PHP</p>
+                            <p>Lua</p>
+                            <p>Python</p>
                             <p><span style="font-size: 10px;"><i>there is more to come</i></span></p>
                         </div>
 
@@ -159,6 +162,16 @@
             </div>
         </div>
         <div id="changelog" class=" page invisible">
+            <h3>17.9.2023</h3>
+            <ul>
+                <li>Added a modal cause I felt like it</li>
+                <li>Used the modal for a meme (there aren't enough here)</li>
+                <li>Added more stuff on the About me section that I forgot about</li>
+                <li>Successfully broke, fixed and updated the icons</li>
+            </ul>
+
+            <span class="space"> </span>
+
             <h3>12.8.2023</h3>
             <ul>
                 <li>Added content for the "Projects" page and linked them to their source code on Github</li>
@@ -226,10 +239,19 @@
                 <li>Created repo and set up placeholder page</li>
             </ul>
         </div>
-        <div id="wip-label" style=" height: 20vh;display: flex;align-items: center;justify-content: flex-end;flex-direction: column;"><div style="margin: 0 auto;width: 40%;text-align: center;height: 10vh;display: flex;flex-direction: column;justify-content: center;background: var(--menu-background-color);border-radius: 20px;"><h2 class="gradient2" style=" margin: 0px;">I'm still working on the website :)</h2> <p style="margin-top: 5px;font-size: 10px;margin-bottom: 0px;">Last update 12.8.2023</p></div></div>
+        <div id="wip-label" style=" height: 20vh;display: flex;align-items: center;justify-content: flex-end;flex-direction: column;"><div style="margin: 0 auto;width: 40%;text-align: center;height: 10vh;display: flex;flex-direction: column;justify-content: center;background: var(--menu-background-color);border-radius: 20px;"><h2 class="gradient2" style=" margin: 0px;">I'm still working on the website :)</h2> <p style="margin-top: 5px;font-size: 10px;margin-bottom: 0px;">Last update 12.8.2023</p> <a  style="margin-top: 5px; font-size: 8px;" href="#" onclick="modalToggle('modal-1')">click for meme</a></div></div>
     </div>
     <!-- WIP Label -->
     <footer><a class="menu-link" href="https://github.com/Jan-Fcloud/jan-fcloud.github.io" target="_blank">source code </a><span class="icon-circle"></span> <a class="menu-link" href="#" onclick="pageSwitch('changelog');">changelog</a></footer>
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <div class="modal-close">
+                <a href="#" onclick="modalToggle('modal-1')" rel="modal:close" class="icon-close"><span></span></a>
+            </div>
+            <p style="text-align: center; font-size: 2em; font-weight: bold; margin-top: 0px; margin-bottom: 10px;">Fr fr</p>
+            <img src="https://cdn.discordapp.com/attachments/920020541543419944/1152118142911397898/IMG_0442.jpg" loading="lazy">
+        </div>
+    </div>
 </body>
 <script>
     const themeChanger = document.getElementById("change-theme");
@@ -275,5 +297,11 @@
                 break;
         }
     }
+
+    function modalToggle(modal){
+        const modalElement = document.getElementById(modal);
+        modalElement.classList.toggle("modal-active");
+    }
+
 </script>
 </html>

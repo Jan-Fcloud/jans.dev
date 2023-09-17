@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'jansdev-icons';
-    src:  url('fonts/jansdev-icons.eot?i7t0dr');
-    src:  url('fonts/jansdev-icons.eot?i7t0dr#iefix') format('embedded-opentype'),
-      url('fonts/jansdev-icons.ttf?i7t0dr') format('truetype'),
-      url('fonts/jansdev-icons.woff?i7t0dr') format('woff'),
-      url('fonts/jansdev-icons.svg?i7t0dr#jansdev-icons') format('svg');
+    src:  url('fonts/jansdev-icons.eot?ty6vlg');
+    src:  url('fonts/jansdev-icons.eot?ty6vlg#iefix') format('embedded-opentype'),
+      url('fonts/jansdev-icons.ttf?ty6vlg') format('truetype'),
+      url('fonts/jansdev-icons.woff?ty6vlg') format('woff'),
+      url('fonts/jansdev-icons.svg?ty6vlg#jansdev-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
-  }
+  }  
   
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
@@ -24,22 +24,25 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  .icon-discord:before {
-    content: "\e903";
-  }
-  .icon-Rammstein:before {
+
+  .icon-close:before {
     content: "\e900";
   }
-  .icon-mail:before {
+  .icon-discord:before {
     content: "\e904";
   }
+  .icon-Rammstein:before {
+    content: "\e901";
+  }
+  .icon-mail:before {
+    content: "\e905";
+  }
   .icon-circle:before {
-    content: "\e902";
+    content: "\e903";
     font-size: 6px;
   }
   .icon-moon:before {
-    content: "\e901";
+    content: "\e902";
   }
   .icon-sun:before {
     content: "\e9d4";
@@ -54,7 +57,7 @@
     content: "\eacc";
   } 
   
-   .icon-moon, .icon-Rammstein, .icon-sun, .icon-circle, .icon-discord, .icon-mail, .icon-spotify, .icon-github, .icon-lastfm{
+   .icon-moon, .icon-Rammstein, .icon-sun, .icon-circle, .icon-discord, .icon-mail, .icon-spotify, .icon-github, .icon-lastfm, .icon-close {
     display: flex;
     align-items: center;
   }
@@ -63,6 +66,7 @@
     --menu-background-color: #f6f6f7;
     --background-color: #ffffff;
     --text-color: black;
+    --soft-red: #c44d4d;
 }
   
 body[data-theme="dark"]{
@@ -71,9 +75,15 @@ body[data-theme="dark"]{
     --text-color: #ffffff;
 }
 
-body{background: var(--background-color); margin: 0; color: var(--text-color)}
-*{color: var(--text-color); font-family: Inter,system-ui,sans-serif;}
+body{background: var(--background-color); margin: 0; color: var(--text-color);}
+*{color: var(--text-color); font-family: Inter,system-ui,sans-serif;text-decoration: none;}
 a{color: var(--text-color);}
+
+.h1-title-hello{
+    font-size: 60px;
+    margin: 0;
+    font-weight: 700;
+}
 
 
 #main-menu{
@@ -154,7 +164,7 @@ a{color: var(--text-color);}
 
 #rammstein::after{
     font-family: 'jansdev-icons' !important;
-    content: "\e900";
+    content: "\e901";
 
     background: #cf6b1f;
     background: -webkit-linear-gradient(to right, #cf6b1f 0%, #d88342 65%);
@@ -351,6 +361,68 @@ footer a{
     }
 }
 
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    -webkit-transition: opacity 0.2s ease;
+
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content{
+    position: relative;
+    background: var(--menu-background-color);
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    height: fit-content;
+    max-width: 800px;
+    max-height: 800px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 60px 0px;
+    flex-direction: column;
+}
+
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    background: var(--soft-red);
+    padding: 4px 4px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 5px 10px;
+    transition: 0.24s all ease-in-out;
+}
+.modal-close:hover{
+    transform: scale(0.95);
+}
 
 /* Library */
 
