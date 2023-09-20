@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'jansdev-icons';
-    src:  url('fonts/jansdev-icons.eot?ty6vlg');
-    src:  url('fonts/jansdev-icons.eot?ty6vlg#iefix') format('embedded-opentype'),
-      url('fonts/jansdev-icons.ttf?ty6vlg') format('truetype'),
-      url('fonts/jansdev-icons.woff?ty6vlg') format('woff'),
-      url('fonts/jansdev-icons.svg?ty6vlg#jansdev-icons') format('svg');
+    src:  url('fonts/jansdev-icons.eot?u7wlz6');
+    src:  url('fonts/jansdev-icons.eot?u7wlz6#iefix') format('embedded-opentype'),
+      url('fonts/jansdev-icons.ttf?u7wlz6') format('truetype'),
+      url('fonts/jansdev-icons.woff?u7wlz6') format('woff'),
+      url('fonts/jansdev-icons.svg?u7wlz6#jansdev-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
-  }  
+  }
   
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
@@ -56,8 +56,11 @@
   .icon-lastfm:before {
     content: "\eacc";
   } 
+  .icon-key:before {
+    content: "\e98d";
+  }
   
-   .icon-moon, .icon-Rammstein, .icon-sun, .icon-circle, .icon-discord, .icon-mail, .icon-spotify, .icon-github, .icon-lastfm, .icon-close {
+   .icon-moon, .icon-Rammstein, .icon-sun, .icon-circle, .icon-discord, .icon-mail, .icon-spotify, .icon-github, .icon-lastfm, .icon-close, .icon-key {
     display: flex;
     align-items: center;
   }
