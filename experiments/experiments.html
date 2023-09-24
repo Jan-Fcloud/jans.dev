@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../default.css" rel="stylesheet" />
+    <link href="experiments.css" rel="stylesheet" />
+    <script src="experiments.js"></script>
+    <title>Jan's Experiments</title>
+</head>
+<body data-theme="dark">
+    <input type="checkbox" id="code-box-toggle" />
+    <label for="code-box-toggle" id="code-box-toggle-label">Turn on experiments?</label>
+    <code-box>
+        <p class="text-center">Commands Experiment</p>
+        <terminal-output id="term-main-out">
+            <!-- <command-response class="regular-response">
+                <terminal-command>test</terminal-command>
+                <terminal-response>test response regular</terminal-response>
+            </command-response>
+            <command-response class="warning-response">
+                <terminal-command>test</terminal-command>
+                <terminal-response>test response warning</terminal-response>
+            </command-response>
+            <command-response class="error-response">
+                <terminal-command>test</terminal-command>
+                <terminal-response>test response error</terminal-response>
+            </command-response> -->
+
+        </terminal-output>
+        <terminal-input contenteditable="true" id="term-main-in">help</terminal-input>
+    </code-box>
+</body>
+</html>
