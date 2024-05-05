@@ -95,11 +95,10 @@ body{
 }
 
 .os-divider-2{
-    width: 4px;
-    height: 65%;
-    background-color: var(--grey98-3);
-    margin-left: 3px;
-    box-shadow: inset 1px 3px 3px 0px var(--grey98-1);
+    width: 2px;
+    height: 18px;
+    background-color: var(--grey98-1);
+    box-shadow: 1px 0px 1px 0px var(--grey98-3);
 }
 
 .os-quickaccess{
@@ -264,4 +263,91 @@ body{
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.window{
+    position: absolute;
+}
+
+.window-actions{
+    box-shadow: var(--border-sunken-inner), var(--border-sunken-outer);
+    padding: 4px;
+    display: flex;
+    gap: 4px;
+    padding-left: 10px;
+}
+
+.window-actions a{
+    text-decoration: none;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: black;
+}
+
+.window-actions a:focus{
+    box-shadow: var(--border-sunken-inner), var(--border-sunken-outer);
+    outline: none;
+}
+
+.window98 .window-body{
+    margin: 4px;
+} 
+
+.end-window-actions{
+    display:flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: end;
+}
+
+.end-window-actions img{
+    width: 35px;
+    height: 18px;
+}
+
+.file-actions{
+    box-shadow: var(--border-sunken-inner), var(--border-sunken-outer);
+    display: flex;
+    gap: 10px;
+    padding: 9px;
+}
+
+.back .action img{
+    transform: rotate(180deg);
+}
+
+.up img{
+    transform: rotate(270deg);
+}
+
+.action img, .action-single img{
+    width: 20px;
+    text-shadow: var(--border-sunken-inner), var(--border-sunken-outer);
+    margin: 0 auto;
+    margin-bottom: 5px;;
+}
+
+.file-actions .action-drop .action a, .file-actions .action-single a{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    width: 40px;
+}
+
+.file-actions .action-drop .action a p, .file-actions .action-single a p{
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    justify-self: flex-end;
+    text-align: center;
+    width: 100%;
+}
+
+.file-actions > div:not(:has(.os-divider-3)){
+    display: flex;
+    height: inherit;
 }
