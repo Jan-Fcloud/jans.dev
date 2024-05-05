@@ -16,7 +16,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 100dvh;
-    /* disable scrollbar for the body */
     overflow: hidden;
 }
 
@@ -42,6 +41,8 @@ body{
     height: 330px;
     z-index: 1001;
     box-shadow: inset 2px 1px 3px 2px var(--grey98-3), 1px 1px 1px 1px black;
+    display: flex;
+    flex-direction: row;
 }
 
 .os-bar{
@@ -79,7 +80,7 @@ body{
     align-items: center;
 }
 
-.os-bar > .os-left > .start > .start-button > .start-icon, .os-bar > .os-right > .os-time > .time > img{
+.os-bar > .os-left > .start > .start-button > .start-icon{
     width: 22px;
 }
 
@@ -106,8 +107,103 @@ body{
 }
 
 .os-quickaccess .icon{
-    background-color: red;
     width: 20px;
     height: 20px;
 }
 
+.os-quickaccess .icon img{
+    width: inherit;
+}
+
+.os-time{
+    box-shadow: var(--border-sunken-inner), var(--border-sunken-outer);
+    height: 30px;
+    font-family: Pixelated MS Sans Serif;
+    font-size: 16px;
+}
+
+.os-time .time{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.os-bar > .os-right > .os-time > .time > img{
+    width: 22px;
+    margin-right: 5px;
+}
+
+.os-right{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wmenu-sidename{
+    background-color: var(--blue98);
+    height: 100%;
+    display: flex;
+}
+
+.wmenu-sidename > p{
+    text-orientation: mixed;
+    writing-mode: tb;
+    transform: rotate(180deg);
+    margin: 3px;
+    margin-bottom: 8px;
+}
+
+.wmenu-sidename > p{
+    font-weight: 100;
+}
+
+.wmenu-sidename > p, .wmenu-sidename > p b{
+    font-family:sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.wmenu-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.wmenu-item img{
+    width: 35px;
+    margin-right: 10px;
+}
+
+.wmenu-item p{
+    font-family: pixelated ms sans serif;
+    font-size: 13px;
+    color: black;
+}
+
+.wmenu-item .arrow{
+    width: 10px;
+    height: 10px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.wmenu-item .arrow img{
+    width: 100%;
+}
+
+.wmenu-maincontent{
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.prevent-select * {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
