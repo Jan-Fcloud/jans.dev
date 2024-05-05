@@ -256,3 +256,12 @@ body{
     outline: dotted 1px var(--grey98-3);
 }
 
+.window .title-bar .title-bar-text img{
+    width: 14px;
+}
+
+.window .title-bar .title-bar-text{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
