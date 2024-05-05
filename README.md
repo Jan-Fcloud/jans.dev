@@ -24,9 +24,9 @@ Here are some of the things I have done, and things I am planning to do / workin
       - [ ] Functionality
         - [ ] Quick access buttons,
         - [ ] Tabs added when apps open
-- [ ] Desktop
+- [X] Desktop
   - [X] Rough app layout
-  - [ ] Styling for W98 icons for apps
+  - [X] Styling for W98 icons for apps
 - [X] 404 page (BSOD like screen)
 - [ ] Basic windows (folders, etc.)
   - [ ] Rough layout
@@ -40,9 +40,10 @@ Here are some of the things I have done, and things I am planning to do / workin
   - [ ] Content,
   - [ ] Actions,
   - [ ] Functionality
+- [X] W98 like mouse pointer
+- [ ] Shutdown window
 - [ ] Games
   - [ ] Snake
   - [ ] others...
-- [ ] Shutdown window
 
 More will be added in the future... 

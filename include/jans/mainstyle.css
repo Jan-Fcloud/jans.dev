@@ -25,11 +25,13 @@ body{
     background-color: var(--green98);
     overflow: hidden;
     position: relative;
+    cursor: url('../jans/cursors/cursor.cur'), auto;
 }
 
 .desktop-app-icon{
-    width: 100px;
-    height: 100px;
+    margin-top: 10px;
+    width: 70px;
+    height: 80px;
 }
 
 .os-wmenu{
@@ -206,4 +208,51 @@ body{
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-  }
+}
+
+.desktop-app-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.desktop-app-icon a{
+    width: inherit;
+    height: inherit;
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: inherit;
+    justify-content: inherit;
+}
+
+.desktop-app-icon a img{
+    width: 60%;
+}
+
+.desktop-app-icon a p{
+    font-family: pixelated ms sans serif;
+    font-size: 12px;
+    color: var(--grey98-3);
+    text-align: center;
+    margin: 0;
+    font-weight: lighter;
+    padding: 1px;
+    outline: none;
+    text-decoration: none;
+}
+
+.desktop-app-icon a:focus{
+    outline: none;
+    text-decoration: none;
+}
+
+.desktop-app-icon a:focus p{
+    background-color: var(--blue98);
+    text-decoration: none;
+    outline: dotted 1px var(--grey98-3);
+}
+
