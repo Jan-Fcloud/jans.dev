@@ -47,3 +47,7 @@ Here are some of the things I have done, and things I am planning to do / workin
   - [ ] others...
 
 More will be added in the future... 
+
+### Latest development screenshot preview
+The page is still far from being done, so it'll still take a bit to implement all I want.
+<img width="801" alt="newjansdev" src="https://github.com/Jan-Fcloud/jans.dev/assets/47220014/1550bd65-deb1-48db-9124-4a3fac690d35">
