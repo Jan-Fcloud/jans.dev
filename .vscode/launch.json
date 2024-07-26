@@ -1,0 +1,8 @@
+{
+	"name": "Arch Debugging Workaround",
+	"type": "chrome",
+	"request": "attach",
+	"port": 9222,
+	"url": "http://localhost:4200",
+	"webRoot": "${workspaceFolder}"
+}
