@@ -351,3 +351,15 @@ body{
     display: flex;
     height: inherit;
 }
+
+.debug{
+    padding: 5px;
+    background-color: red;
+    position: fixed;
+    bottom: 100px;
+    left: 300px;
+}
+
+.debug p{
+    color: white;
+}
