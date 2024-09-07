@@ -1,0 +1,21 @@
+.mainNav{
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.mainNav a{
+    color: white;
+    text-decoration: none;
+    transition: 0.18s ease-in-out;
+    text-transform: uppercase;
+}
+
+.mainNav a:hover{
+    color: rgb(167, 127, 217);
+    transition: 0.18s ease-in-out;
+}
