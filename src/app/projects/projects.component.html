@@ -1,3 +1,5 @@
 <div class="projects">
-    <app-repo-card *ngFor="let repo of repos" [repoData]="repo"></app-repo-card>
+    @for (item of repos; track $index) {
+        <app-repo-card [repoData]="item"></app-repo-card>
+    }
 </div>
