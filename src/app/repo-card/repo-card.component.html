@@ -1,5 +1,9 @@
-<div class="repo-card">
+<a href="{{ repoData.html_url }}" target="_blank" class="repo-link repo-card">
+  <div class="icon-name">
+    <img src="{{ repoData.owner.avatar_url }}" alt="avatar" class="avatar" />
     <h2>{{ repoData.name }}</h2>
-    <p>{{ repoData.description }}</p>
-    <p>Stars: {{ repoData.stargazers_count }}</p>
-</div>
+  </div>
+
+  <p>{{ repoData.description }}</p>
+  <p>Stars: {{ repoData.stargazers_count }}</p>
+</a>
