@@ -1,10 +1,10 @@
-<a href="{{ repoData.html_url }}" target="_blank" class="repo-link repo-card">
+<a href="{{ repoData.url }}" target="_blank" class="repo-link repo-card">
   <div class="icon-name">
-    <img src="{{ repoData.owner.avatar_url }}" alt="avatar" class="avatar" />
-    <h2>{{ repoData.name }}</h2>
+    <img src="{{ repoData.avatar_url }}" alt="avatar" class="avatar" />
+    <h2>{{ repoData.title }}</h2>
   </div>
 
   <p>{{ repoData.description }}</p>
-  <p><span [ngStyle]="{'color': dynamicColor()}"><fa-icon [icon]="iCircle"></fa-icon></span> {{repoData.language}}
-    <fa-icon [icon]="iStar"></fa-icon> Stars: {{ repoData.stargazers_count }}</p>
+  <p><span [ngStyle]="{'color': repoData.languageColor}"><fa-icon [icon]="iCircle"></fa-icon></span> {{repoData.language}}
+    <fa-icon [icon]="iStar"></fa-icon> Stars: {{ repoData.stars }}</p>
 </a>
