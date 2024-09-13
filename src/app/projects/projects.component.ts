@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { NgFor, CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
@@ -6,20 +6,23 @@ import { RepoCardComponent } from '../repo-card/repo-card.component';
 import { ProjectService } from '../services/project.service';
 import { Repo } from '../services/models/repo';
 import { StorageService } from '../services/storage-service.service';
-import {LoadingComponent} from '../loading/loading.component';
+import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
   standalone: true,
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  imports: [RepoCardComponent, NgFor, LoadingComponent, CommonModule]
+  imports: [RepoCardComponent, NgFor, LoadingComponent, CommonModule],
 })
-export class ProjectsComponent implements OnInit{
-  constructor(private projectService: ProjectService){}
+export class ProjectsComponent implements OnInit {
+  constructor(
+    private projectService: ProjectService,
+    private StorageService: StorageService
+  ) {}
 
   loading$: boolean = true;
-  repos$: Observable<Repo[]> | undefined;
+  repos$: Observable<any> | undefined;
 
   // https://api.github.com/repos/<organization>/<project>
 
@@ -28,38 +31,20 @@ export class ProjectsComponent implements OnInit{
   //jsonData$ : Observable<any>[] = [];
 
   ngOnInit() {
-    /*
-    if(sessionStorage.getItem("ready") === null){
-    this.projectService.getRepoData(this.showProjects).subscribe({
-      next: (data: any[]) => {
-        this.repos = data;
+    console.log('ProjectsComponent: ngOnInit');
+    if (!this.StorageService.exists('repos')) {
+      this.repos$ = this.projectService.getRepoData();
+    }
+
+    this.repos$?.subscribe({
+      next: (data) => {
+        console.log(data);
+        this.StorageService.set({ identifier: 'repos' }, data);
+        this.loading$ = false;
       },
-      error: (error: any) => {
-        console.error("Error: ", error);
+      error: (error) => {
+        console.log(error);
       },
-      complete: () => {
-        sessionStorage["ready"] = true;
-      }
-    })
-  }else{
-    this.showProjects.forEach(element => {
-      let repo = sessionStorage.getItem(element) as string;
-      this.repos.push(JSON.parse(repo));
     });
-  }
-    */
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
 }

@@ -18,7 +18,7 @@ export class StorageService {
     return this.storage.getItem(id) !== null;
   }
 
-  get<Type extends Base>(model: Type): string[] | null {
+  get<Type extends Base>(model: Type): string[] | Type[] | null {
     let item = this.storage.getItem(model.identifier);
     return item ? JSON.parse(item) : null;
   }
