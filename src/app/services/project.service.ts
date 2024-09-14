@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { forkJoin, map, Observable, switchMap } from 'rxjs';
+import { concatMap, forkJoin, from, map, mergeMap, Observable, of, switchMap, tap, timeout } from 'rxjs';
 
 import { LoadingComponent } from '../loading/loading.component';
 import { StorageService } from './storage-service.service';
@@ -11,7 +11,7 @@ import { Repo } from './models/repo';
   providedIn: 'root'
 })
 export class ProjectService {
-  constructor(private http: HttpClient, private LoadingComponent: LoadingComponent, private Storage: StorageService) { 
+  constructor(private http: HttpClient, private Storage: StorageService) { 
   }
 
     getProjects(): Observable<any> {
@@ -26,24 +26,23 @@ export class ProjectService {
       }
       return new Observable();
     }
-    
 
-    getRepoData(): Observable<any[]> {
+    fetchRepoData(repoURL : string){
+      const url = `https://api.github.com/repos/${repoURL}`;
+      return this.http.get(url);
+    }
+
+    getRepos(): Observable<any> {
       console.log("ProjectService: get");
-      this.LoadingComponent.show();
-      // Step 1: Get repo names (Observable of names)
+  
       return this.getProjects().pipe(
-        // Step 2: Switch to the new observable of HTTP requests after getting repo names
-        switchMap((repoNames: string[]) => {
-          // Step 3: Map each repo name to an HTTP GET request
-          const requests = repoNames.map(name => 
-            this.http.get(`https://api.github.com/repos/${name}`).pipe(
-              map(data => data) // You can transform the data here if needed
-            )
+        mergeMap(data => {
+          const requests = Object.values(data).map((repoPath) =>
+            this.fetchRepoData(repoPath as string)
           );
-          // Step 4: Use forkJoin to wait for all requests to complete
           return forkJoin(requests);
         })
       );
     }
+      
 }

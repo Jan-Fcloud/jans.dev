@@ -1,5 +1,5 @@
 <div class="projects">
-    <app-loading></app-loading>
+        <app-loading></app-loading>
     @for (item of (repos$ | async); track $index) {
         <app-repo-card [repoData]="item"></app-repo-card>
     }

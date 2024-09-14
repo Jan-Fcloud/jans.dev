@@ -1,10 +1,9 @@
-import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { NgFor, CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { Observable, of, timeout } from 'rxjs';
 
 import { RepoCardComponent } from '../repo-card/repo-card.component';
 import { ProjectService } from '../services/project.service';
-import { Repo } from '../services/models/repo';
 import { StorageService } from '../services/storage-service.service';
 import { LoadingComponent } from '../loading/loading.component';
 
@@ -20,9 +19,9 @@ export class ProjectsComponent implements OnInit {
     private projectService: ProjectService,
     private StorageService: StorageService
   ) {}
+  repos$: Observable<any> = of([]);
 
-  loading$: boolean = true;
-  repos$: Observable<any> | undefined;
+  repos: WritableSignal<string[]> = signal([]);
 
   // https://api.github.com/repos/<organization>/<project>
 
@@ -33,18 +32,12 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     console.log('ProjectsComponent: ngOnInit');
     if (!this.StorageService.exists('repos')) {
-      this.repos$ = this.projectService.getRepoData();
+      console.log("ProjectsComponent: getRepos");
+      this.repos$ = this.projectService.getRepos();
+    }else{
+      this.repos.set(JSON.parse(this.StorageService.get("repos")));
+      this.repos$ = of(this.repos);
     }
-
-    this.repos$?.subscribe({
-      next: (data) => {
-        console.log(data);
-        this.StorageService.set({ identifier: 'repos' }, data);
-        this.loading$ = false;
-      },
-      error: (error) => {
-        console.log(error);
-      },
-    });
+    console.log(this.repos);
   }
 }

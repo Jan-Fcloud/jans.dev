@@ -1,7 +1,9 @@
 import { Base } from './base';
 
 export interface Repo extends Base {
-    title: string;
+    organization: string;
+    project: string;
+    fullname: string;
     description: string;
     url: string;
     avatar_url: string;

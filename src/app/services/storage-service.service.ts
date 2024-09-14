@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
 import { Base } from './models/base';
 
 
@@ -18,12 +18,16 @@ export class StorageService {
     return this.storage.getItem(id) !== null;
   }
 
-  get<Type extends Base>(model: Type): string[] | Type[] | null {
-    let item = this.storage.getItem(model.identifier);
-    return item ? JSON.parse(item) : null;
+  get(model: string): string {
+    let item = this.storage.getItem(model);
+    return item ? JSON.parse(item).toObservable() : null;
   }
 
-  set<Type extends Base>(model: Type, data: Type[] | Type): void {
+  set<Type extends Base>(model: Type | string, data: Type[] | Type): void {
+    if (typeof model === 'string') {
+      this.storage.setItem(model, JSON.stringify(data));
+      return;
+    }
     this.storage.setItem(model.identifier, JSON.stringify(data));
   }
 }
