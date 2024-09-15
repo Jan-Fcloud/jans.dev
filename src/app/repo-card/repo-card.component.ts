@@ -4,8 +4,6 @@ import { NgStyle } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowUpRightFromSquare, faStar, faCircle } from '@fortawesome/free-solid-svg-icons';
 
-import { Repo } from '../services/models/repo';
-
 @Component({
   standalone: true,
   selector: 'app-repo-card',
@@ -20,5 +18,5 @@ export class RepoCardComponent {
   iCircle = faCircle;
 
   @Input()
-  repoData!: Repo;
+  repoData: any;
 }
