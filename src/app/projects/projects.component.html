@@ -1,5 +1,7 @@
 <div class="projects">
-    @for (item of repos; track $index) {
+    @for (item of repos$; track $index) {
         <app-repo-card [repoData]="item"></app-repo-card>
+    } @empty{
+        <p>No projects found</p>
     }
 </div>

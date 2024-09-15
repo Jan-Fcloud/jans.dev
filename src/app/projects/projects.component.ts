@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgFor, CommonModule } from '@angular/common';
 
 import { RepoCardComponent } from '../repo-card/repo-card.component';
+import { Repo, repoData } from 'src/public/repos';
+import { Observable, of } from 'rxjs';
 
 @Component({
   standalone: true,
@@ -13,9 +15,8 @@ import { RepoCardComponent } from '../repo-card/repo-card.component';
 export class ProjectsComponent implements OnInit {
   constructor() {}
 
-  repos: any[] = [];
-
+  repos$: Repo[] = new repoData().data;
   ngOnInit() {
-    
+    this.repos$ = new repoData().data
   }
 }
