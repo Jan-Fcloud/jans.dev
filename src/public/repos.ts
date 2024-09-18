@@ -58,6 +58,14 @@ export class repoData{
             languageColor: this.colors["C++"]
         },
         {
+            url: "https://github.com/Jan-Fcloud/gimnazija-qr-quiz",
+            avatar_url: "https://avatars.githubusercontent.com/u/47220014?v=4&size=64",
+            fullname: "Gimnazija QR Quiz",
+            description: "A WP plugin that transforms a WP site into a quiz platform. It was make for a collaboration with a College.",
+            language: "PHP",
+            languageColor: this.colors["PHP"]
+        },
+        {
             url: "https://github.com/Jan-Fcloud/Unitypackage-Extract-and-Clean",
             avatar_url: "https://avatars.githubusercontent.com/u/47220014?v=4&size=64",
             fullname: "Unitypackage-Extract-and-Clean",
@@ -69,7 +77,7 @@ export class repoData{
             url: "https://github.com/HakuSystems/EasyExtractUnitypackage",
             avatar_url: "https://avatars.githubusercontent.com/u/66133638?v=48&size=64",
             fullname: "EasyExtractUnitypackage",
-            description: "A unitypackage extractor and inspector.",
+            description: "A unitypackage extractor and inspector, with a focus on ease of use and speed.",
             language: "C#",
             languageColor: this.colors["C#"]
         },
