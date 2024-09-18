@@ -7,10 +7,22 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    font-size: 5em;
+    margin: 0%;
 }
 
 .btw{
     font-size: smaller;
     color: #3d3c3c;
     font-style: italic;
+}
+
+.main-home{
+    margin-top: calc(100dvh / 4);
+}
+
+@media screen and (max-width: 544px){
+    .hello{
+        font-size: 3em;
+    }
 }
