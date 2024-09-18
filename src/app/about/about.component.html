@@ -1,22 +1,58 @@
 <div class="about">
-    <div class="left-side">
-        <img class="pfp" src="https://avatars.githubusercontent.com/u/47220014?v=4&size=256" alt="" srcset="">
-    </div>
-    <div class="right-side">
-        I've been been into programming pretty much since I was a kid. It always fascinated me how things work under the hood.
-        The languages I started with are Lua and C++, and I have been learning and using more languages since then. <br><br>
+  <div class="left-side">
+    <img
+      class="pfp"
+      src="https://avatars.githubusercontent.com/u/47220014?v=4&size=256"
+      alt="Jan-FCloud Profile Picture - GitHub"
+      
+    />
+  </div>
+  <div class="right-side">
+    <h1>Jan-FCloud</h1>
+    I've been been into programming pretty much since I was a kid. It always
+    fascinated me how things work under the hood. The languages I started with
+    are Lua and C++, and I have been learning and using more languages since
+    then. <br /><br />
 
-        I keep learning, improving and researching my knowledge on new and existing technologies I am interested in. <br><br>
+    I keep learning, improving and researching my knowledge on new and existing
+    technologies I am interested in. <br /><br />
 
-        Listening to music while doing anything is a must. My favorite band is Rammstein. <br>Oh and cats are pretty cool too.
-    </div>
-    
+    Listening to music while doing anything is a must. My favorite band is
+    Rammstein. <br />Oh and cats are pretty cool too.
+  </div>
+</div>
 
+<div class="stuff">
+  <h2>Stuff I used:</h2>
+  <div class="icons">
+    <img src="../../assets/icons/angular.svg" alt="Angular Logo" />
+    <img src="../../assets/icons/csharp.svg" alt="CSharp Logo"/>
+    <img src="../../assets/icons/cplusplus.svg" alt="C++ Logo"/>
+    <img src="../../assets/icons/rust.svg" alt="Rust Logo"/>
+    <img src="../../assets/icons/css3.svg" alt="CSS Logo"  />
+    <img src="../../assets/icons/html5.svg" alt="HTML Logo"  />
+    <img src="../../assets/icons/typescript.svg" alt="TypeScript Logo"  />
+    <img src="../../assets/icons/nodedotjs.svg" alt="NodeJS Logo"  />
+    <img src="../../assets/icons/python.svg" alt="Python Logo"  />
+    <img src="../../assets/icons/reactivex.svg" alt="RxJS Logo"  />
+    <img src="../../assets/icons/php.svg" alt="PHP Logo"  />
+    <img src="../../assets/icons/javascript.svg" alt="JavaScript Logo"  />
+    <img src="../../assets/icons/swift.svg" alt="Swift Logo"  />
+    <img src="../../assets/icons/linux.svg" alt="Linux Logo"  />
+    <img src="../../assets/icons/neovim.svg" alt="Neovim Logo"  />
+    <img src="../../assets/icons/rider.svg" alt="Rider Logo"  />
+    <img src="../../assets/icons/coder.svg" alt="Coder Logo"  />
+    <img src="../../assets/icons/docker.svg" alt="Docker Logo"  />
+    <img src="../../assets/icons/git.svg" alt="Git Logo"  />
+    <img src="../../assets/icons/bun.svg" alt="Bun Logo"  />
+  </div>
+
+  <h2>Projects:</h2>
 </div>
 <div class="projects">
-    @for (item of repos$; track $index) {
-        <app-repo-card [repoData]="item"></app-repo-card>
-    } @empty{
-        <p>No projects found</p>
-    }
+  @for (item of repos$; track $index) {
+  <app-repo-card [repoData]="item"></app-repo-card>
+  } @empty{
+  <p>No projects found</p>
+  }
 </div>

@@ -47,3 +47,5 @@ dockerfile
 
 bun.lockb
 package-lock.json
+
+notes.txt
