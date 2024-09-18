@@ -121,6 +121,9 @@
               "node_modules/clipboard/dist/clipboard.min.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

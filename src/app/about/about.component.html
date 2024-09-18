@@ -1,1 +1,22 @@
-<p>about works!</p>
+<div class="about">
+    <div class="left-side">
+        <img class="pfp" src="https://avatars.githubusercontent.com/u/47220014?v=4&size=256" alt="" srcset="">
+    </div>
+    <div class="right-side">
+        I've been been into programming pretty much since I was a kid. It always fascinated me how things work under the hood.
+        The languages I started with are Lua and C++, and I have been learning and using more languages since then. <br><br>
+
+        I keep learning, improving and researching my knowledge on new and existing technologies I am interested in. <br><br>
+
+        Listening to music while doing anything is a must. My favorite band is Rammstein. <br>Oh and cats are pretty cool too.
+    </div>
+    
+
+</div>
+<div class="projects">
+    @for (item of repos$; track $index) {
+        <app-repo-card [repoData]="item"></app-repo-card>
+    } @empty{
+        <p>No projects found</p>
+    }
+</div>
