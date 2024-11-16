@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Post } from 'src/public/posts/posts';
+import { Post } from 'src/public/posts';
 import { RouterModule } from '@angular/router';
 
 @Component({

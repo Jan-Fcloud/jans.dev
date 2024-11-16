@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MarkdownComponent } from 'ngx-markdown';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [MarkdownComponent],
+  imports: [MarkdownComponent, RouterModule],
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })

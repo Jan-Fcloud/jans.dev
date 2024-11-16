@@ -1,6 +1,13 @@
+<a class="back" routerLink="/blog">&lt; Back</a>
 @if(postExists)
 {
-    <markdown [src]="markdownPath" (error)="onMarkdownError()"></markdown>
+    <markdown 
+        lineHighlight
+        lineNumbers
+        clipboard
+        [src]="markdownPath" 
+        (error)="onMarkdownError()">
+    </markdown>
 }
 @else
 { 

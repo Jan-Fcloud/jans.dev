@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogCardComponent } from '../blog-card/blog-card.component';
-import { Post,postData } from 'src/public/posts/posts';
+import { Post,postData } from 'src/public/posts';
 
 @Component({
   standalone: true,
