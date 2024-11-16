@@ -22,6 +22,16 @@ const routes: Routes = [
     loadComponent: () =>
       import('./contact/contact.component').then((m) => m.ContactComponent),
   },
+  {
+    path: 'blog',
+    loadComponent: () =>
+      import('./blog/blog.component').then((m) => m.BlogComponent),
+  },
+  {
+    path: 'blog/:id',
+    loadComponent: () =>
+      import('./post/post.component').then((m) => m.PostComponent),
+  },
 ];
 
 @NgModule({

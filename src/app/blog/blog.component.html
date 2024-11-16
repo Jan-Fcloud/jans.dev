@@ -1,1 +1,5 @@
-<p>I'll eventually make a blog!</p>
+<div class="blog-grid">
+    @for (post of posts; track $index) {
+    <app-blog-card [post]="post"></app-blog-card>
+    }
+</div>

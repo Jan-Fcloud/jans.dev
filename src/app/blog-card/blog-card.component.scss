@@ -1,0 +1,37 @@
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .blog-card .content {
+    padding: 20px;
+  }
+  
+  .blog-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+  }
+  
+  .blog-card p {
+    margin: 0 0 20px;
+    color: #666;
+  }
+  
+  .blog-card a {
+    color: rgb(167, 127, 217);
+    text-decoration: none;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px);
+  }

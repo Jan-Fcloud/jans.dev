@@ -8,11 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, FontAwesomeModule, HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient })],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, FontAwesomeModule, HttpClientModule, RouterModule, MarkdownModule.forRoot({ loader: HttpClient })],
 })
 
 export class AppModule {}

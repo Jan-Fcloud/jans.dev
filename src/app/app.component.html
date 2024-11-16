@@ -1,11 +1,18 @@
 <nav class="mainNav">
   <a routerLink="/home">Home</a>
   <a routerLink="/about">About</a>
-  <a routerLink="/contact">Contact</a>
+  <a routerLink="/blog">Blog</a>
 </nav>
 
 <div class="main-content">
   <router-outlet></router-outlet>
 </div>
 
-<footer> <p> made with 7 iq  <span>&nbsp;•&nbsp;   </span> <a class="sc" href="https://github.com/Jan-Fcloud/jans.dev" target="_blank">source code</a> </p> </footer>
+<footer>
+  <p>
+    made with 7 iq <span>   &nbsp;•&nbsp;   </span>
+    <a class="sc" href="https://github.com/Jan-Fcloud/jans.dev" target="_blank">source code</a>
+    <span>   &nbsp;•&nbsp;   </span>
+    <a class="sc" routerLink="/contact">contact</a>
+  </p>
+</footer>
