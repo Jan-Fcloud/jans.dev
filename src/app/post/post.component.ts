@@ -11,6 +11,7 @@ import { MarkdownComponent } from 'ngx-markdown';
 })
 export class PostComponent implements OnInit {
   markdownPath: string = '';
+  postExists: boolean = true;
 
   // get the markdown file path from the route
   // the file is: /public/posts/<url postfix after blog/>.md
@@ -22,8 +23,8 @@ export class PostComponent implements OnInit {
     });
   }
 
-  onMarkdownError(error: any) {
-    console.error('Error loading markdown');
+  onMarkdownError() {
+    this.postExists = false;
   }
 
 }

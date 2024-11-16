@@ -1,1 +1,8 @@
-<markdown [src]="this.markdownPath"></markdown>
+@if(postExists)
+{
+    <markdown [src]="markdownPath" (error)="onMarkdownError()"></markdown>
+}
+@else
+{ 
+    <h1 class="err">The post you are looking for does not exist.</h1>
+}
