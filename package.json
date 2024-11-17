@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "reset": "ng cache clean",
-    "deploy": "ng deploy --dir=dist/jans.dev --cname=jans.dev --repo=https://github.com/Jan-Fcloud/jans.dev.git --message=\"What could possibly go wrong again?\" --branch=gh-pages --no-nojekyll"
+    "deploy": "bun run src/generate-sitemap.ts && ng deploy --repo=https://github.com/Jan-Fcloud/jans.dev.git --message=\"What could possibly go wrong again?\" --branch=gh-pages --no-nojekyll"
   },
   "private": true,
   "dependencies": {
