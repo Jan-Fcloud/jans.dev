@@ -10,6 +10,8 @@ async function generateSitemap() {
   const sitemap = new SitemapStream({ hostname: BASE_URL });
 
   sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0 });
+  sitemap.write({ url: '/about', changefreq: 'monthly', priority: 0.9 });
+  sitemap.write({ url: '/contact', changefreq: 'monthly', priority: 0.9 });
   sitemap.write({ url: '/blog', changefreq: 'daily', priority: 0.8 });
 
   postData.data.forEach(post => {
@@ -23,7 +25,7 @@ async function generateSitemap() {
 
   const sitemapOutput = await streamToPromise(sitemap).then(data => data.toString());
 
-  const writeStream = createWriteStream('./dist/sitemap.xml');
+  const writeStream = createWriteStream('./src/sitemap.xml');
   writeStream.write(sitemapOutput);
   writeStream.end();
 }
