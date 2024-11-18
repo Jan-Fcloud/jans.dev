@@ -1,3 +1,4 @@
+
 <a class="back" routerLink="/blog">&lt; Back</a>
 @if(postExists)
 {
@@ -8,6 +9,8 @@
         [src]="markdownPath" 
         (error)="onMarkdownError()">
     </markdown>
+
+    <app-feedback-request></app-feedback-request>
 }
 @else
 { 

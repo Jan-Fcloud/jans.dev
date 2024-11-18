@@ -1,16 +1,14 @@
-.err{
-    color: red;
-    margin-top: auto;
-    margin-bottom: auto;
+.feedback{
+    margin-top: 3em;
+    margin-bottom: 3em;
     text-align: center;
     font-size: 1.5em;
     font-weight: 500;
     padding: 20px;
-    background-color: rgba(255, 0, 0, 0.2);
-    
+    background-color: rgba(165, 109, 234, 0.086);
 }
 
-a{
+.feedback a{
     text-decoration: none;
     color: rgb(167, 127, 217);
 }
