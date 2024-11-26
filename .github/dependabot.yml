@@ -6,17 +6,9 @@ updates:
       interval: "weekly"
     groups:
       angular-and-typescript:
-        dependencies:
-          - "@angular/core"
-          - "@angular/cli"
-          - "@angular/common"
-          - "@angular/compiler"
-          - "@angular/compiler-cli"
-          - "@angular/forms"
-          - "@angular/platform-browser"
-          - "@angular/platform-browser-dynamic"
-          - "@angular/router"
-          - "typescript"
+        patterns:
+          - "^@angular/"
+          - "^typescript$"
     ignore:
       - dependency-name: "typescript"
         versions:
