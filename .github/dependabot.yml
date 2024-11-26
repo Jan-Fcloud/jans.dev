@@ -15,5 +15,5 @@ updates:
     groups:
       angular-packages:
         patterns:
-          - "@angular/"
+          - "angular"
           - "typescript"
