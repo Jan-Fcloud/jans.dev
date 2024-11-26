@@ -5,12 +5,23 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      angular-and-typescript:
+      angular-typescript-group:
         patterns:
           - "^@angular/"
           - "^typescript$"
+    labels:
+      - "angular-typescript-updates"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      other-dependencies:
+        patterns:
+          - "*"
+    labels:
+      - "other-dependencies-updates"
     ignore:
-      - dependency-name: "typescript"
-        versions:
-          - ">5.6.3"
       - dependency-name: "@angular/*"
+      - dependency-name: "typescript"
