@@ -15,5 +15,8 @@ updates:
     groups:
       angular-packages:
         patterns:
-          - "angular"
+          - "^@angular/"
+          - "@angular/core"
+          - "@angular/cli"
+          - "@angular/common"
           - "typescript"
