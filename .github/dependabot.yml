@@ -17,3 +17,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      other-dependencies:
+        patterns:
+          - "*"
+    ignore:
+      - dependency-name: "@angular/*"
+      - dependency-name: "typescript"
