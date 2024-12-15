@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SeoService} from "../seo.service";
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  constructor(private seo: SeoService) {}
 
+  ngOnInit() {
+    this.seo.updateMetadata('Contact', 'This is the contact page');
+    this.seo.setCanonicalURL('http://localhost:4000/contact');
+  }
 }

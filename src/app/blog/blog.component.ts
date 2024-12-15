@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogCardComponent } from '../blog-card/blog-card.component';
 import { Post,postData } from 'src/public/posts';
+import {SeoService} from "../seo.service";
 
 @Component({
   standalone: true,
@@ -12,9 +13,11 @@ import { Post,postData } from 'src/public/posts';
 export class BlogComponent implements OnInit {
   posts : Post[] = postData.data;
 
-  constructor() { 
+  constructor(private seo: SeoService) {
   }
 
   ngOnInit(): void {
+    this.seo.updateMetadata('Blog', 'This is the blog page');
+    this.seo.setCanonicalURL('http://localhost:4000/blog');
   }
 }

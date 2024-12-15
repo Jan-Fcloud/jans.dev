@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -21,6 +21,9 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
+  ],
+  providers: [
+    provideClientHydration(withEventReplay())
   ],
 })
 export class AppModule {}

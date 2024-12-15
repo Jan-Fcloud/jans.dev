@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RepoCardComponent } from '../repo-card/repo-card.component';
 import { Repo, repoData } from 'src/public/repos';
+import {SeoService} from "../seo.service";
 
 @Component({
   standalone: true,
@@ -12,10 +13,12 @@ import { Repo, repoData } from 'src/public/repos';
   imports: [RepoCardComponent, CommonModule],
 })
 export class AboutComponent implements OnInit {
-  constructor() {}
+  constructor(private seo: SeoService) {}
 
   repos$: Repo[] = new repoData().data;
   ngOnInit() {
     this.repos$ = new repoData().data;
+    this.seo.updateMetadata('About', 'This is the about page');
+    this.seo.setCanonicalURL('http://localhost:4000/about');
   }
 }

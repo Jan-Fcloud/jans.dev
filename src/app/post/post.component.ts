@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { MarkdownComponent } from 'ngx-markdown';
 import { RouterModule } from '@angular/router';
 import { FeedbackRequestComponent } from '../feedback-request/feedback-request.component';
+import {SeoService} from "../seo.service";
+import {postData} from "../../public/posts";
 
 @Component({
   selector: 'app-post',
@@ -17,11 +19,14 @@ export class PostComponent implements OnInit {
 
   // get the markdown file path from the route
   // the file is: /public/posts/<url postfix after blog/>.md
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private seo: SeoService) {}
 
   ngOnInit() : void{
     this.route.params.subscribe((params) => {
       this.markdownPath = `public/posts/${params['id']}.md`;
+      const post = postData.data.find(post => post.path === `${postData.basePath}/${params['id']}.md`);
+      this.seo.updateMetadata(`${post?.title}`, `${post?.description}`, `${post?.img_url}`);
+      this.seo.setCanonicalURL(`https://jans.dev/blog/${params['id']}`);
     });
   }
 
