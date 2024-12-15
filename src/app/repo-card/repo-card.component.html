@@ -1,9 +1,0 @@
-<a href="{{ repoData.url }}" target="_blank" class="repo-link repo-card">
-  <div class="icon-name">
-    <img src="{{ repoData.avatar_url }}" alt="avatar" class="avatar" />
-    <h2>{{ repoData.fullname }}</h2>
-  </div>
-
-  <p>{{ repoData.description }}</p>
-  <p><span [ngStyle]="{'color': repoData.languageColor}"><fa-icon [icon]="iCircle"></fa-icon></span> {{repoData.language}}
-</a>

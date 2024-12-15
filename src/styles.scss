@@ -1,17 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #141414;
-    color: white;
-    margin: 0 auto;
-    padding: 0 !important;
-}
-
-app-root{
-    display:flex;
-    min-height: 100dvh !important;
-    flex-direction: column;
-}
