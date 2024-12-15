@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      angular-and-typescript:
+        patterns:
+          - "^@angular/"
+          - "^typescript$"
+      other-dependencies:
+        patterns:
+          - "*"
+    ignore:
+      - dependency-name: "typescript"
+        versions:
+          - ">5.6.3"
