@@ -1,3 +1,5 @@
-# The main branch of the website repo does no corelate with the current version of the website.
+# jans.dev main site
 
-Main will now be used for the v2 development of the website. The code for the current live version is under the **v1** branch.
+My website project will be remade in SvelteKit, with the goal of mimicing the old internet look and feel.
+
+It will feature a blog, resources, tools, etc.
